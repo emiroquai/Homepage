@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Protest+Guerrilla&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+  font-family: 'Roboto', sans-serif;
+  --body-padding: 25px;
+}
+
+body, header, main, footer, .card-wrapper {
+  display: grid;
+}
+
+body{
+  margin: 0;
+  padding: 0;
+  grid-template-rows: 1fr 2fr 1fr;
+  /* height: 100vh; */
+  width: 100vw;
+}
+
+header {
+  grid-auto-flow: column;
+  background-color: rgb(249, 214, 249);
+  padding: var(--body-padding);
+}
+
+#portrait {
+  display: flex;
+  background-image: url("./assets/portrait.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-width: 250px;
+  min-height: 250px;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.text-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 80%;
+  background-color: whitesmoke;
+  align-self: center;
+  padding: 10px;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.icon-wrapper {
+  display: grid;
+  grid-auto-flow: column;
+  align-self: end;
+  gap: 5px;
+}
+
+h1, h2, h3 {
+  margin: 0;  
+  font-family: 'Protest Guerrilla';
+}
+
+main {
+  grid-auto-flow: row;
+  padding-left: var(--body-padding);
+  padding-top: 15px;
+  align-content: start;
+  gap: 20px;
+}
+
+.wrapper {
+display: flex;
+flex-wrap: wrap;  
+gap: 20px;
+}
+
+.card-wrapper {
+  max-width: 200px;
+  max-height: 300px;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.screenshot {
+  max-width: 100%;
+  max-height: 200px;
+}
+
