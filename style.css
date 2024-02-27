@@ -2,7 +2,9 @@
 
 :root {
   font-family: 'Roboto', sans-serif;
-  --body-padding: 25px;
+  --body-padding-side: 25px;
+  --body-padding-top: 25px;
+
 }
 
 body, header, main, footer, .card-wrapper {
@@ -12,15 +14,16 @@ body, header, main, footer, .card-wrapper {
 body{
   margin: 0;
   padding: 0;
-  grid-template-rows: 1fr 2fr 1fr;
-  /* height: 100vh; */
   width: 100vw;
 }
 
 header {
   grid-auto-flow: column;
+  padding: var(--body-padding-side);
+}
+
+header, footer {
   background-color: rgb(249, 214, 249);
-  padding: var(--body-padding);
 }
 
 #portrait {
@@ -28,8 +31,8 @@ header {
   background-image: url("./assets/portrait.jpeg");
   background-size: cover;
   background-repeat: no-repeat;
-  min-width: 250px;
-  min-height: 250px;
+  height: 300px;
+  width: 250px;
   justify-content: center;
   align-items: flex-end;
 }
@@ -40,7 +43,7 @@ header {
   height: 80%;
   background-color: whitesmoke;
   align-self: center;
-  padding: 10px;
+  padding: 15px;
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
 
@@ -49,6 +52,11 @@ header {
   grid-auto-flow: column;
   align-self: end;
   gap: 5px;
+  justify-content: flex-start;
+}
+
+.icon-wrapper.footer {
+  gap: 15px;
 }
 
 h1, h2, h3 {
@@ -58,10 +66,9 @@ h1, h2, h3 {
 
 main {
   grid-auto-flow: row;
-  padding-left: var(--body-padding);
-  padding-top: 15px;
   align-content: start;
   gap: 20px;
+  padding: var(--body-padding-top) var(--body-padding-side);
 }
 
 .wrapper {
@@ -71,7 +78,7 @@ gap: 20px;
 }
 
 .card-wrapper {
-  max-width: 200px;
+  max-width: 250px;
   max-height: 300px;
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
@@ -79,5 +86,17 @@ gap: 20px;
 .screenshot {
   max-width: 100%;
   max-height: 200px;
+}
+
+footer {
+  padding: var(--body-padding-top) var(--body-padding-side);
+  grid-auto-flow: column;
+  gap: 15px;
+  justify-content: space-between;
+}
+
+.footer-photo {
+object-fit: cover;
+max-height: 400px;
 }
 
