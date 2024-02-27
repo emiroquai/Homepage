@@ -19,11 +19,12 @@ body{
 
 header {
   grid-auto-flow: column;
-  padding: var(--body-padding-side);
+  padding: var(--body-padding-top) var(--body-padding-side);
 }
 
 header, footer {
   background-color: rgb(249, 214, 249);
+  height: 350px;
 }
 
 #portrait {
@@ -31,8 +32,7 @@ header, footer {
   background-image: url("./assets/portrait.jpeg");
   background-size: cover;
   background-repeat: no-repeat;
-  height: 300px;
-  width: 250px;
+  min-width: 350px;
   justify-content: center;
   align-items: flex-end;
 }
@@ -72,20 +72,18 @@ main {
 }
 
 .wrapper {
-display: flex;
-flex-wrap: wrap;  
-gap: 20px;
+display: grid;
+gap: 2vw;
+justify-items: center;
 }
 
 .card-wrapper {
-  max-width: 250px;
-  max-height: 300px;
+  max-width: 320px;
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
 
 .screenshot {
   max-width: 100%;
-  max-height: 200px;
 }
 
 footer {
@@ -97,6 +95,32 @@ footer {
 
 .footer-photo {
 object-fit: cover;
-max-height: 400px;
+max-height: 350px;
 }
 
+/* Desktop */
+
+@media (min-width: 769px) {
+  .wrapper {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    }
+}
+
+/* Tablet */
+
+@media (max-width: 768px) {
+  .wrapper {
+    display: grid;
+    flex-wrap: wrap;  
+    gap: 20px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    }
+}
+
+/* Mobile */
+
+@media (max-width: 481px) {
+  
+}
