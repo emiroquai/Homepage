@@ -11,7 +11,11 @@
 <body>
   <header>
     <picture class="portrait">
-      <img src="./assets/portrait.jpeg" alt="Me">
+      <source 
+        srcset="./assets/portrait-mobile.jpeg"
+        media="(max-width: 481px)"
+      />
+      <img src="./assets/portrait.jpeg" alt="Me" id="portrait-img">
     </picture>
     <h1 id="name">Emir Dincer</h1>
     <div class="text-wrapper">
